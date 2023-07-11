@@ -2,7 +2,7 @@ import { FC } from 'react'
 import Image from 'next/image'
 import user from '@/assets/user.svg'
 import details from '@/assets/details.svg'
-import star from '@/assets/star.svg'
+import star from '@/assets/Star.svg'
 
 interface CodeSnippetProps {}
 
@@ -57,30 +57,30 @@ const CodeSnippet: FC<CodeSnippetProps> = ({}) => {
                 <span className="text-textPurple">_value</span>);
               </h6>
             </div>
-<div className="pl-3">
-            <h6 className="text-xs text-textMuted2">
-              <span className="text-textOrange">const</span> initializedChunk:{' '}
-              <span className="text-textOrange">InitializedChunk</span>
-              <span className="text-textPurple">{'<T>'}</span> = (chunk: any);
-            </h6>
+            <div className="pl-3">
+              <h6 className="text-xs text-textMuted2">
+                <span className="text-textOrange">const</span> initializedChunk:{' '}
+                <span className="text-textOrange">InitializedChunk</span>
+                <span className="text-textPurple">{'<T>'}</span> = (chunk: any);
+              </h6>
             </div>
             <div className="pl-3">
-            <h6 className="text-xs text-textMuted">
-              <span className="text-textPurple">
-                initializedChunk._status = INITIALIZED;
-              </span>
-            </h6>
+              <h6 className="text-xs text-textMuted">
+                <span className="text-textPurple">
+                  initializedChunk._status = INITIALIZED;
+                </span>
+              </h6>
             </div>
             <div className="pl-3">
-            <h6 className="text-xs text-textMuted2">
-              initializedChunk.<span className="text-textPurple">_value</span> =
-              value;
-            </h6>
+              <h6 className="text-xs text-textMuted2">
+                initializedChunk.<span className="text-textPurple">_value</span>{' '}
+                = value;
+              </h6>
             </div>
             <div className="pl-3">
-            <h6 className="text-xs text-textMuted">
-              return <span className="text-textPurple">value</span>
-            </h6>
+              <h6 className="text-xs text-textMuted">
+                return <span className="text-textPurple">value</span>
+              </h6>
             </div>
             <h6 className="text-xs text-textMuted">{'}'}</h6>
           </div>
@@ -126,30 +126,30 @@ const CodeSnippet: FC<CodeSnippetProps> = ({}) => {
                 <span className="text-textPurple">_value</span>);
               </h6>
             </div>
-<div className="pl-3">
-            <h6 className="text-xs text-textMuted2">
-              <span className="text-textOrange">const</span> initializedChunk:{' '}
-              <span className="text-textOrange">InitializedChunk</span>
-              <span className="text-textPurple">{'<T>'}</span> = (chunk: any);
-            </h6>
+            <div className="pl-3">
+              <h6 className="text-xs text-textMuted2">
+                <span className="text-textOrange">const</span> initializedChunk:{' '}
+                <span className="text-textOrange">InitializedChunk</span>
+                <span className="text-textPurple">{'<T>'}</span> = (chunk: any);
+              </h6>
             </div>
             <div className="pl-3">
-            <h6 className="text-xs text-textMuted">
-              <span className="text-textPurple">
-                initializedChunk._status = INITIALIZED;
-              </span>
-            </h6>
+              <h6 className="text-xs text-textMuted">
+                <span className="text-textPurple">
+                  initializedChunk._status = INITIALIZED;
+                </span>
+              </h6>
             </div>
             <div className="pl-3">
-            <h6 className="text-xs text-textMuted2">
-              initializedChunk.<span className="text-textPurple">_value</span> =
-              value;
-            </h6>
+              <h6 className="text-xs text-textMuted2">
+                initializedChunk.<span className="text-textPurple">_value</span>{' '}
+                = value;
+              </h6>
             </div>
             <div className="pl-3">
-            <h6 className="text-xs text-textMuted">
-              return <span className="text-textPurple">value</span>
-            </h6>
+              <h6 className="text-xs text-textMuted">
+                return <span className="text-textPurple">value</span>
+              </h6>
             </div>
             <h6 className="text-xs text-textMuted">{'}'}</h6>
           </div>
