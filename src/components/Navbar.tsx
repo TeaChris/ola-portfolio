@@ -26,7 +26,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
   }
 
   return (
-    <nav className="w-full h-14 lg:h-10 grid place-items-center top-0 left-0 fixed bg-body z-20 border-0 :border-b border-textMuted shadow-sm shadow-black">
+    <nav className="w-full h-14 lg:h-10 grid place-items-center top-0 left-0 fixed bg-body z-20 border-0 lg:border-b border-textMuted shadow-sm shadow-black lg:shadow-none">
       <div className="mx-auto w-navContainerWidth h-full flex justify-between items-center relative">
         <div className="w-fit pr-3 lg:w-[39rem] sm:max-w-3xl h-full flex items-center gap-0 pl-2">
           <div className="w-fit pr-4 lg:pr-0 lg:w-[40%] h-full border-0 lg:border-r border-white flex items-center justify-start">
