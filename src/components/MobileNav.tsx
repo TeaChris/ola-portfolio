@@ -44,6 +44,8 @@ const MobileNav: FC<MobileNavProps> = ({}) => {
       <div className="w-full h-16 bg-transparent pl-5 pt-6">
         <Link
           href="/ola.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-lg font-medium text-white w-full h-full"
         >
           _resume

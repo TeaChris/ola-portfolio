@@ -21,7 +21,7 @@ const Nav: FC<NavProps> = ({}) => {
         _hello
       </Link>
       <Separator orientation="vertical" />
-      <Link href="/" className="text-textMuted">
+      <Link href="/about" className="text-textMuted">
         _about
       </Link>
       <Separator orientation="vertical" />
