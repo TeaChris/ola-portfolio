@@ -27,7 +27,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
   const pathname = usePathname()
 
   return (
-    <nav className="w-full h-[6%] flex items-center justify-center top-0 left-0 fixed bg-body z-20 border-0 lg:border-b border-textMuted shadow-sm shadow-black lg:shadow-none">
+    <nav className="w-full h-[10%] lg:h-[6%] flex items-center justify-center top-0 left-0 fixed bg-body z-20 border-0 lg:border-b border-textMuted shadow-sm shadow-black lg:shadow-none">
       <div className="w-full flex items-start justify-between h-full px-2 lg:px-0">
         <div className="lg:w-[40%] h-full flex items-center">
           <div className="w-fit lg:w-[25%] h-full border-0 lg:border-r lg:border-textMuted flex items-center justify-center">

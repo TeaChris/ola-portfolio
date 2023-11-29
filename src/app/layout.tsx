@@ -22,8 +22,9 @@ export default function RootLayout({
         className={`${myFont.className} w-screen min-h-screen bg-body relative lg:overflow-hidden`}
       >
         <Navbar />
-        
-        {children}
+
+        <div className="w-screen h-[80%] lg:h-[88%]">{children}</div>
+
         <Footer />
       </body>
     </html>
