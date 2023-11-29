@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setColor(getRandomColor)
+      setColor(getRandomColor())
     }, 2000)
 
     return () => clearInterval(intervalId)
@@ -34,23 +34,34 @@ export default function Home() {
             <h2 className="text-6xl lg:text-4xl leading-2 text-white">
               Boluwatife Olasunkanmi
             </h2>
-            <h3 className="text-lg text-textPurple">
-              {'> '}
-              Frontend & UX Engineer{' '}
-              <span style={style}>(Software Engineer)</span>
-            </h3>
+            <div className="w-full flex flex-col lg:flex lg:flex-row items-start lg:items-center gap-2">
+              <h3 className="text-lg text-white lg:text-textPurple">
+                {'> '}
+                Frontend & UX Engineer
+              </h3>
+              <div className="w-fit h-fit pl-4 lg:pl-0">
+                <span style={style}>(Software Engineer)</span>
+              </div>
+            </div>
 
             <div className="block lg:hidden left-12 top-[50%] absolute w-[80%] h-[70%] bg-gradient-to-b from-textGreen to-body blur-3xl"></div>
           </div>
 
           <div className="w-full items-start gap-3 flex flex-col">
-            <span className="text-xs text-textMuted">
+            <span className="text-sm text-textMuted">
               {'// you are gonna enjoy this😊😍'}
             </span>
-            <span className="text-xs text-textMuted">
-              {'// complete the game to continue👉'}
+            <span className="text-sm text-textMuted">
+              {'//'} complete the{' '}
+              <Link
+                href={'https://rpsgamebybermuda.netlify.app'}
+                className="underline text-textOrange"
+              >
+                game
+              </Link>{' '}
+              to continue👉
             </span>
-            <span className="text-xs text-textMuted">
+            <span className="text-sm text-textMuted">
               {'// you can also see my github page👇'}
             </span>
             <div className="w-full flex items-center gap-3">
@@ -68,7 +79,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-1/2 h-full relative flex items-center justify-center">
+        <div className="w-1/2 h-full relative hidden lg:flex items-center justify-center">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-x-0 -z-20 top-0 transform-gpu overflow-hidden blur-3xl sm:top-5"
@@ -104,7 +115,11 @@ export default function Home() {
             height={200}
           />
 
-          <Link href={''} className="w-[80%] h-[80%] z-50" target="_blank">
+          <Link
+            href={'https://rpsgamebybermuda.netlify.app'}
+            className="w-[80%] h-[80%] z-50"
+            target="_blank"
+          >
             <Image
               src={'/s.png'}
               alt="snake game"
