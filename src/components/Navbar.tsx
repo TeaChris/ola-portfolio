@@ -1,71 +1,88 @@
 'use client'
 
-import { FC, useState } from 'react'
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
+import { FC } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
-import Nav from './Nav'
-import { Button } from './ui/button'
-import menu from '@/assets/menu.svg'
-import close from '@/assets/close.svg'
+import { usePathname } from 'next/navigation'
 import MobileNav from './MobileNav'
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from './ui/sheet'
+import { Menu } from 'lucide-react'
 
 interface NavbarProps {}
 
-const Navbar: FC<NavbarProps> = ({}) => {
-  const [isOpen, setIsOpen] = useState(false)
+const nav = [
+  {
+    label: '_hello',
+    href: '/',
+  },
+  {
+    label: '_about-me',
+    href: '/about',
+  },
+  {
+    label: '_projects',
+    href: '/projects',
+  },
+]
 
-  const handleOpen = () => {
-    setIsOpen(!isOpen)
-  }
+const Navbar: FC<NavbarProps> = ({}) => {
+  const pathname = usePathname()
 
   return (
-    <nav className="w-full h-14 lg:h-10 grid place-items-center top-0 left-0 fixed bg-body z-20 border-0 lg:border-b border-textMuted shadow-sm shadow-black lg:shadow-none">
-      <div className="mx-auto w-navContainerWidth h-full flex justify-between items-center relative">
-        <div className="w-fit pr-3 lg:w-[39rem] sm:max-w-3xl h-full flex items-center gap-0 pl-2">
-          <div className="w-fit pr-4 lg:pr-0 lg:w-[40%] h-full border-0 lg:border-r border-textMuted flex items-center justify-start">
-            <h6 className="text-textSecondary text-lg font-bold">Bermuda</h6>
+    <nav className="w-full h-[6%] flex items-center justify-center top-0 left-0 fixed bg-body z-20 border-0 lg:border-b border-textMuted shadow-sm shadow-black lg:shadow-none">
+      <div className="w-full flex items-start justify-between h-full px-2 lg:px-0">
+        <div className="w-[40%] h-full flex items-center">
+          <div className="w-[25%] h-full border-r border-textMuted flex items-center justify-center">
+            <h3 className="text-textSecondary text-lg sm:text-xl font-bold">
+              Bermuda
+            </h3>
           </div>
-          <div className="hidden w-[75%] h-full lg:grid place-items-center">
-            <Nav />
+          <div className="hidden w-[75%] h-full border-r border-textMuted lg:flex">
+            {nav.map((item) => (
+              <div
+                key={item.label}
+                className={`w-[33.3%] h-full flex items-center justify-center border-r border-textMuted ${
+                  pathname === item.href ? 'border-b-2 border-textOrange' : ''
+                }`}
+              >
+                <Link href={item.href} className="text-base text-textMuted">
+                  {item.label}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
-
-        {/* resume */}
-        <div className="hidden w-32 h-full lg:grid place-items-center border-l border-white px-2">
-          <Link
-            href="/ola.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-textMuted"
-          >
-            _resume
+        <div
+          className={`${
+            pathname === '/contact' ? 'border-b-2 border-textOrange' : ''
+          } w-[10%] h-full border-l border-textMuted flex items-center justify-center`}
+        >
+          <Link href="/contact" className="text-base text-textMuted">
+            _contact
           </Link>
         </div>
-
-        {/*  */}
-        <div className="block lg:hidden w-fit pr-2">
-          <Button variant="ghost" onClick={handleOpen}>
-            {isOpen ? (
-              <Image src={close} alt="menu" className="" />
-            ) : (
-              <Image src={menu} alt="close" className="" />
-            )}
-          </Button>
-        </div>
-
-        <div
-          className={`w-full h-[35rem] bg-body lg:hidden ${
-            isOpen ? 'top-16' : 'top-[-700px]'
-          } transition-all duration-500 ease-in-out left-0 absolute`}
-        >
-          <MobileNav />
+        <div className="lg:hidden md:block">
+          <Sheet>
+            <SheetTrigger className="group -m-2 flex items-center p-2">
+              <Menu className="h-6 w-6 flex-shrink-0 text-textMuted" />
+            </SheetTrigger>
+            {/* ts-ignore */}
+            <SheetContent className="flex items-center justify-center">
+              <div className="w-fit h-fit flex flex-col items-center gap-4">
+                {nav.map((item) => (
+                  <Link key={item.label} href={item.href} className="text-base text-textMuted">
+                    {item.label}
+                  </Link>
+                ))}
+                <Link href={'/contact'} className="text-base text-textMuted">
+                    _contact
+                  </Link>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>

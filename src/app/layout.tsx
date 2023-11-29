@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
-import { Fira_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 import Footer from '@/components/Footer'
 
@@ -20,9 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${myFont.className} bg-body relative lg:overflow-hidden`}
+        className={`${myFont.className} w-screen min-h-screen bg-body relative lg:overflow-hidden`}
       >
         <Navbar />
+        
         {children}
         <Footer />
       </body>
