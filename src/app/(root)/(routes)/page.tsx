@@ -1,8 +1,30 @@
+'use client'
+
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+
+const getRandomColor = () => {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16)
+}
 
 export default function Home() {
+  const [color, setColor] = useState(getRandomColor)
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setColor(getRandomColor)
+    }, 2000)
+
+    return () => clearInterval(intervalId)
+  }, [])
+
+  const style = {
+    color: color,
+    transition: 'color 2s ease-in-out',
+  }
+
   return (
     <main className="w-screen h-[50rem] lg:h-screen overflow-y-hidden">
       <MaxWidthWrapper className="h-full flex items-center gap-[5%] pl-2 relative overflow-hidden">
@@ -12,10 +34,11 @@ export default function Home() {
             <h2 className="text-6xl lg:text-4xl leading-2 text-white">
               Boluwatife Olasunkanmi
             </h2>
-            <span className="text-lg text-textPurple">
+            <h3 className="text-lg text-textPurple">
               {'> '}
-              Frontend & UX Engineer (Software Engineer)
-            </span>
+              Frontend & UX Engineer{' '}
+              <span style={style}>(Software Engineer)</span>
+            </h3>
 
             <div className="block lg:hidden left-12 top-[50%] absolute w-[80%] h-[70%] bg-gradient-to-b from-textGreen to-body blur-3xl"></div>
           </div>
@@ -76,7 +99,7 @@ export default function Home() {
             src="/bg.svg"
             alt="bg"
             aria-hidden="true"
-            className="w-full h-[80%] object-cover z-20 object-cover"
+            className="w-full h-[80%] z-20 object-cover"
             width={200}
             height={200}
           />
