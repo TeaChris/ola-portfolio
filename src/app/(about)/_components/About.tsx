@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import Link from 'next/link'
 import { VscClose } from 'react-icons/vsc'
-import { buttonVariants } from './ui/button'
-import Skills from './Skills'
+import { buttonVariants } from '../../../components/ui/button'
+import Skills from '../../../components/Skills'
 
 interface AboutProps {}
 

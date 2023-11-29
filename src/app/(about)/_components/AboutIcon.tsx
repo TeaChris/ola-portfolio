@@ -5,7 +5,7 @@ import Image from 'next/image'
 import img1 from '@/assets/icon1.svg'
 import img2 from '@/assets/icon2.svg'
 import img3 from '@/assets/icon3.svg'
-import { buttonVariants } from './ui/button'
+import { buttonVariants } from '../../../components/ui/button'
 
 interface AboutIconProps {}
 

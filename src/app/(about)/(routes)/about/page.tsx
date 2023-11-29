@@ -1,11 +1,11 @@
 import { FC } from 'react'
 
-import About from '@/components/About'
-import AboutIcon from '@/components/AboutIcon'
-import AboutMobile from '@/components/AboutMobile'
-import AboutSkills from '@/components/AboutSkills'
-import CodeSnippet from '@/components/CodeSnippet'
-import PersonalInfo from '@/components/PersonalInfo'
+import About from '@/app/(about)/_components/About'
+import AboutIcon from '@/app/(about)/_components/AboutIcon'
+import AboutSkills from '@/app/(about)/_components/AboutSkills'
+import CodeSnippet from '@/app/(about)/_components/CodeSnippet'
+import PersonalInfo from '@/app/(about)/_components/PersonalInfo'
+import AboutMobile from '@//app/(about)/_components/AboutMobile'
 
 interface pageProps {}
 
