@@ -23,7 +23,7 @@ export default function RootLayout({
       >
         <Navbar />
 
-        <div className="w-screen h-[80%] lg:h-[88%]">{children}</div>
+        <div className="w-screen h-fit lg:h-[88%]">{children}</div>
 
         <Footer />
       </body>

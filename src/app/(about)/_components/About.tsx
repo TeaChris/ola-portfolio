@@ -8,7 +8,7 @@ interface AboutProps {}
 
 const About: FC<AboutProps> = ({}) => {
   return (
-    <section className="hidden lg:block w-[45.1%] h-full border-r border-zinc-400 flex flex-col gap-0 items-start relative">
+    <section className="hidden w-[45.1%] h-full border-r border-zinc-400 lg:flex flex-col gap-0 items-start relative">
       <div className="w-full h-16 border-b border-zinc-400">
         <div className="w-40 h-full flex items-center justify-between  px-2 pt-6 border-r border-zinc-400">
           <span className="text-xs text-textMuted">personal-info</span>
