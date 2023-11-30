@@ -183,3 +183,67 @@ export const project: Projects[] = [
     icon: react,
   },
 ]
+
+type About = {
+  number: number
+  label: string
+}[]
+
+export const about: About = [
+  {
+    number: 1,
+    label: '/**',
+  },
+  {
+    number: 2,
+    label: '* I like to craft solid and scalable, frontend Highly skilled',
+  },
+  {
+    number: 3,
+    label: '* at progressive enhancement, design systems & UI Engineering.',
+  },
+  {
+    number: 4,
+    label: '* I may not fit the typical profile of a designer sitting',
+  },
+  {
+    number: 5,
+    label: '* behind an Illustrator artboard, meticulously adjusting pixels.',
+  },
+  {
+    number: 6,
+    label: "* However, design is my passion. You'll find me deeply",
+  },
+  {
+    number: 7,
+    label: '* engrossed in stylesheets, fine-tuning font sizes, and',
+  },
+  {
+    number: 8,
+    label: '* contemplating layouts. My dedication lies in crafting seamless',
+  },
+  {
+    number: 9,
+    label: '* user experiences while keeping up with the latest trends and',
+  },
+  {
+    number: 10,
+    label: '* aesthetics. When it comes to building JavaScript applications,',
+  },
+  {
+    number: 11,
+    label: '* I have the right tools and the ability to work independently',
+  },
+  {
+    number: 12,
+    label: '* with them. My focus is on delivering fast, resilient solutions',
+  },
+  {
+    number: 13,
+    label: '* that are optimized for scalability and performance.',
+  },
+  {
+    number: 14,
+    label: '**/',
+  },
+]

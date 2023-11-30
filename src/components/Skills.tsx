@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Image from 'next/image'
-import { skills, Skills } from '../../data'
+import { skills, Skills } from '../data'
 
 interface SkillsProps {}
 

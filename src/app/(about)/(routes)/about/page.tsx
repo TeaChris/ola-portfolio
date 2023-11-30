@@ -43,7 +43,7 @@ const Page: FC<pageProps> = ({}) => {
             </div>
           ))}
         </div>
-        <div className="w-[55%] h-full border-r-2 border-textMuted2">
+        <div className="w-[70%] h-full border-r-2 border-textMuted2">
           {active === 0 && <PersonalInfo />}
         </div>
       </div>
@@ -57,4 +57,3 @@ const Page: FC<pageProps> = ({}) => {
 }
 
 export default Page
-
