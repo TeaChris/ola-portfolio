@@ -9,6 +9,7 @@ import CodeSnippet from '@/app/(about)/_components/CodeSnippet'
 import PersonalInfo from '@/app/(about)/_components/PersonalInfo'
 import AboutMobile from '@//app/(about)/_components/AboutMobile'
 import Image from 'next/image'
+import { PocketKnife } from 'lucide-react'
 
 const icons = ['/svg/icon1.svg', '/svg/icon2.svg', '/svg/icon3.svg']
 
@@ -45,6 +46,15 @@ const Page: FC<pageProps> = ({}) => {
         </div>
         <div className="w-[70%] h-full border-r-2 border-textMuted2">
           {active === 0 && <PersonalInfo />}
+        </div>
+
+        <div className="w-[25%] h-full flex flex-col items-start gap-0 pt-5">
+          <div className="w-full h-[10%] border-b-2 flex items-center justify-start pt-7 pl-4 border-textMuted2">
+            <div className="w-fit h-fit flex items-center gap-2">
+              <PocketKnife className="w-5 h-5 text-white" />
+              <h3 className="text-white text-sm">skills</h3>
+            </div>
+          </div>
         </div>
       </div>
 

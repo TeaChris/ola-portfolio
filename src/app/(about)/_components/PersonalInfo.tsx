@@ -85,7 +85,7 @@ const PersonalInfo: FC<PersonalInfoProps> = ({}) => {
             </div>
           </div>
 
-          <div className="w-fit flex items-center gap-1 pl-2">
+          <div className="w-fit flex items-center gap-1">
             <Image
               src={'/svg/education.svg'}
               alt="icon"
@@ -97,7 +97,7 @@ const PersonalInfo: FC<PersonalInfoProps> = ({}) => {
             </h4>
           </div>
 
-          <div className="w-fit flex items-center gap-1 pl-2">
+          <div className="w-fit flex items-center gap-1">
             <Image
               src={'/svg/education.svg'}
               alt="icon"
@@ -149,7 +149,7 @@ const PersonalInfo: FC<PersonalInfoProps> = ({}) => {
           </div>
         </div>
 
-        <div className="w-full h-fit p-4 flex flex-col items-start gap-2 border-b-2 border-textMuted2">
+        <div className="w-full h-fit p-4 flex flex-col items-start gap-2">
           {about.map((abt) => (
             <div
               key={abt.number}
