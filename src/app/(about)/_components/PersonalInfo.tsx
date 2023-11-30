@@ -149,7 +149,7 @@ const PersonalInfo: FC<PersonalInfoProps> = ({}) => {
           </div>
         </div>
 
-        <div className="w-full h-fit p-4 flex flex-col items-start gap-2">
+        <div className="w-full h-fit p-4 flex flex-col items-start gap-4">
           {about.map((abt) => (
             <div
               key={abt.number}

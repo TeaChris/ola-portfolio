@@ -2,7 +2,6 @@
 
 import { FC, useState } from 'react'
 
-import About from '@/app/(about)/_components/About'
 import AboutIcon from '@/app/(about)/_components/AboutIcon'
 import AboutSkills from '@/app/(about)/_components/AboutSkills'
 import CodeSnippet from '@/app/(about)/_components/CodeSnippet'
