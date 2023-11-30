@@ -9,13 +9,7 @@ import {
   BsChevronRight,
 } from 'react-icons/bs'
 
-import bio from '@/assets/bio.svg'
-import interest from '@/assets/interest.svg'
-import pro from '@/assets/profession.svg'
-import education from '@/assets/education.svg'
-
 import { Balancer } from 'react-wrap-balancer'
-import AboutSkills from './AboutSkills'
 
 export default function AboutMobile() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -47,25 +41,55 @@ export default function AboutMobile() {
             <div className="w-full h-fit pl-8 flex flex-col items-start gap-2">
               <div className="flex items-center gap-2">
                 <BsChevronRight size={17} className="text-textMuted" />
-                <Image src={bio} alt="bio" className="" />
+                <Image
+                  src="/svg/bio.svg"
+                  width={17}
+                  height={17}
+                  alt="bio"
+                  className=""
+                />
                 <span className="text-xs text-textMuted">bio</span>
               </div>
               <div className="flex items-center gap-2">
                 <BsChevronRight size={17} className="text-textMuted" />
-                <Image src={interest} alt="interest" className="" />
+                <Image
+                  src={'/svg/interest.svg'}
+                  width={17}
+                  height={17}
+                  alt="interest"
+                  className=""
+                />
                 <span className="text-xs text-textMuted">interest</span>
               </div>
               <div className="flex items-center gap-2">
                 <BsChevronDown size={17} className="text-white font-bold" />
-                <Image src={pro} alt="profession" className="" />
+                <Image
+                  src={'/svg/case.svg'}
+                  width={17}
+                  height={17}
+                  alt="profession"
+                  className=""
+                />
                 <span className="text-xs text-textMuted">education</span>
               </div>
               <div className="pl-12 flex items-center gap-2">
-                <Image src={education} alt="education" className="" />
+                <Image
+                  src={'/svg/education.svg'}
+                  width={17}
+                  height={17}
+                  alt="education"
+                  className=""
+                />
                 <span className="text-xs text-textMuted">high-school</span>
               </div>
               <div className="pl-12 flex items-center gap-2">
-                <Image src={education} alt="education" className="" />
+                <Image
+                  src={'/svg/education.svg'}
+                  width={17}
+                  height={17}
+                  alt="education"
+                  className=""
+                />
                 <span className="text-xs text-textMuted">university</span>
               </div>
             </div>

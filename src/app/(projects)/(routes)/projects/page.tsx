@@ -1,4 +1,3 @@
-import ProjectAside from '@/components/ProjectAside'
 import ProjectHeading from '@/components/ProjectHeading'
 import Projects from '@/components/Projects'
 import ProjectMobile from '@/components/ProjectMobile'
@@ -57,8 +56,3 @@ const page: FC<pageProps> = ({}) => {
 }
 
 export default page
-
-{
-  /* <ProjectAside />
-        <Projects /> */
-}

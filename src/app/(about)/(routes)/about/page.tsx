@@ -23,7 +23,7 @@ const Page: FC<pageProps> = ({}) => {
 
   return (
     <main className="w-full h-fit lg:h-screen overflow-y-scroll lg:overflow-hidden">
-      <div className="w-full flex items-start gap-0 h-full">
+      <div className="w-full lg:flex items-start gap-0 h-full hidden">
         <div className="w-[5%] h-full border-r-2 border-textMuted2 flex flex-col pt-24 items-center gap-0">
           {icons.map((icon, index) => (
             <div
@@ -58,8 +58,8 @@ const Page: FC<pageProps> = ({}) => {
       </div>
 
       <div className=" w-full h-full flex flex-col items-start lg:hidden">
-        {/* <AboutMobile />
-        <AboutSkills /> */}
+        <AboutMobile />
+        <AboutSkills />
       </div>
     </main>
   )
