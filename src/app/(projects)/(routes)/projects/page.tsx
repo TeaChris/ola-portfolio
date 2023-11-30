@@ -44,6 +44,8 @@ const page: FC<pageProps> = ({}) => {
             </div>
           </div>
         </div>
+
+        <Projects />
       </div>
       {/* mobile */}
       <div className="block lg:hidden w-full h-fit">

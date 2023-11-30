@@ -9,9 +9,9 @@ interface ProjectsProps {}
 export default async function Projects() {
   const projects = await getProjects()
   return (
-    <main className="w-[83.1%] h-screen flex flex-col gap-0 overflow-y-scroll">
-      <div className="w-full h-16 border-b border-zinc-400">
-        <div className="w-48 h-full flex items-center justify-between  px-2 pt-6 border-r border-zinc-400">
+    <main className="w-[83.1%] h-screen flex flex-col gap-0 overflow-y-scroll pt-9">
+      <div className="w-full h-16 border-b-2 border-textMuted2 pt-4">
+        <div className="w-48 h-full flex items-center justify-between  px-2 pt-1 border-r-2 border-textMuted2">
           <span className="text-xs text-textMuted">Nextjs; Tailwind</span>
           <VscClose size={17} className="text-textMuted" />
         </div>
