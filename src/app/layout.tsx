@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import './globals.css'
 import localFont from 'next/font/local'
 import Footer from '@/components/Footer'
+import { Toaster } from '@/components/ui/toaster'
 
 const myFont = localFont({ src: '../assets/fira-mono.medium.ttf' })
 
@@ -23,7 +24,10 @@ export default function RootLayout({
       >
         <Navbar />
 
-        <div className="w-screen h-fit lg:h-[88%]">{children}</div>
+        <div className="w-screen h-fit lg:h-[88%]">
+          {children}
+          <Toaster />
+        </div>
 
         <Footer />
       </body>

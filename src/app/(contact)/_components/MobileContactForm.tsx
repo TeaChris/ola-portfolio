@@ -1,11 +1,11 @@
 'use client'
-import { useState, useRef } from 'react'
 import { useForm } from 'react-hook-form'
-import { Label } from '../../../components/ui/label'
-import { Input } from '../../../components/ui/input'
-import { Textarea } from '../../../components/ui/textarea'
-import { Button } from '../../../components/ui/button'
-import SuccessModal from '../../../components/SuccessModal'
+import { Label } from '@/components/ui/label'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
+import emailjs from 'emailjs-com'
+import { useToast } from '@/hooks/use-toast'
 
 type FormValues = {
   name: string
@@ -14,25 +14,55 @@ type FormValues = {
 }
 
 export default function MobileContactForm() {
-  const [showModal, setShowModal] = useState<boolean>(false)
+  const { toast } = useToast()
+
   const form = useForm<FormValues>()
   // to track the form state with react-hook-form use 👇
-  const { register, control, handleSubmit, formState, reset } = form
+  const { register, handleSubmit, formState, reset } = form
   const { errors } = formState
 
   const onSubmit = (data: FormValues) => {
     console.log('Submitted', data)
+    // send from
+    emailjs
+      .sendForm(
+        'service_5qx03hm',
+        'template_6723pht',
+        document.getElementById('my-form') as HTMLFormElement,
+        'cSfCB_fQMQ8n04-ZW'
+      )
+      .then(
+        (result) => {
+          console.log('Email sent successfully:', result.text) // reset form state
+          toast({
+            variant: 'default',
+            title: 'Success!',
+            description:
+              'Your message was successfully sent, Olasunkanmi will receive your message',
+          })
+          reset()
+        },
+        // if error occurs
+        (error) => {
+          console.error('Error sending email:', error.text)
+          toast({
+            variant: 'destructive',
+            title: 'Error',
+            description:
+              'An error occurred while trying to send your message, please try again',
+          })
+        }
+      )
 
-    setTimeout(() => {
-      // Show the modal upon successful form submission
-      setShowModal(true)
-    }, 1000)
+    setTimeout(() => {}, 1000)
     reset() // Reset the form when showModal is true
   }
+
   return (
-    <div className="w-full h-full pl-3 mt-12">
+    <div className="w-full h-full px-3 mt-12">
       <form
-        className="w-[92%] h-fit flex flex-col items-start gap-3 bg-transparent"
+        id="my-form"
+        className="w-full h-fit flex flex-col items-start gap-3 bg-transparent"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="w-full h-fit flex flex-col items-start gap-2">
@@ -44,6 +74,7 @@ export default function MobileContactForm() {
               required: 'name is required',
             })}
             placeholder="enter you name"
+            className="w-full h-14"
           />
           <p className="text-rose-500 text-xs">{errors.name?.message}</p>
         </div>
@@ -61,23 +92,26 @@ export default function MobileContactForm() {
               required: 'email is required',
             })}
             placeholder="enter you email"
+            className="w-full h-14"
           />
           <p className="text-rose-500 text-xs">{errors.email?.message}</p>
         </div>
         <div className="w-full h-fit flex flex-col items-start gap-2">
           <Label htmlFor="name">_message:</Label>
           <Textarea
-            placeholder="Type your message here."
+            placeholder="Hi there, I think we need a design system"
             id="message"
             {...register('message', {
               required: 'message is required',
             })}
+            className="w-full h-52"
           />
           <p className="text-rose-500 text-xs">{errors.message?.message}</p>
         </div>
-        <Button variant="secondary">submit-message</Button>
+        <Button variant="secondary" className="w-full h-12 px-2">
+          submit-message
+        </Button>
       </form>
-      <SuccessModal showModal={showModal} setShowModal={setShowModal} />
     </div>
   )
 }
