@@ -8,7 +8,7 @@ const AboutSkills: FC<AboutSkillsProps> = ({}) => {
   return (
     <div className="w-full h-[30rem] flex flex-col items-start gap-4 mt-8 py-2 px-3">
       <div className="w-full h-fit">
-        <h6 className="text-lg text-white">_my-skills</h6>
+        <h6 className="text-xl text-white">_my-skills</h6>
       </div>
 
       <div className="w-full h-fit grid grid-cols-4 items-start gap-2">

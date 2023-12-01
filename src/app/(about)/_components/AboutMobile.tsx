@@ -1,7 +1,4 @@
-'use client'
-
 import Image from 'next/image'
-import { useState } from 'react'
 import {
   BsCaretDownFill,
   BsFillCaretRightFill,
@@ -12,100 +9,87 @@ import {
 import { Balancer } from 'react-wrap-balancer'
 
 export default function AboutMobile() {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-
-  const handleOpen = () => {
-    setIsOpen(true)
-  }
-
   return (
     <div className="w-full h-fit mt-20">
       <div className="h-full w-navContainerWidth flex flex-col items-start gap-5 mx-auto">
         <div className="px-3 w-full">
-          <h6 className="text-lg text-white">_about-me</h6>
+          <h6 className="text-2xl text-white">_about-me</h6>
         </div>
 
         <div className="w-full h-fit flex flex-col items-start gap-1">
           <div className="w-full h-fit flex flex-col items-start gap-2">
-            <button
-              className="w-full h-12 bg-textMuted2 flex gap-3 items-center px-3"
-              onClick={handleOpen}
-            >
-              {isOpen ? (
-                <BsCaretDownFill size={17} className="text-white" />
-              ) : (
-                <BsFillCaretRightFill size={17} className="text-white" />
-              )}
+            <button className="w-full h-14 bg-textMuted2 flex gap-3 items-center px-3">
+              <BsFillCaretRightFill size={18} className="text-white" />
               <h6 className="text-white text-lg">personal-info</h6>
             </button>
             <div className="w-full h-fit pl-8 flex flex-col items-start gap-2">
               <div className="flex items-center gap-2">
-                <BsChevronRight size={17} className="text-textMuted" />
+                <BsChevronRight size={18} className="text-textMuted" />
                 <Image
                   src="/svg/bio.svg"
-                  width={17}
-                  height={17}
+                  width={18}
+                  height={18}
                   alt="bio"
                   className=""
                 />
-                <span className="text-xs text-textMuted">bio</span>
+                <span className="text-sm text-textMuted">bio</span>
               </div>
               <div className="flex items-center gap-2">
-                <BsChevronRight size={17} className="text-textMuted" />
+                <BsChevronRight size={18} className="text-textMuted" />
                 <Image
                   src={'/svg/interest.svg'}
-                  width={17}
-                  height={17}
+                  width={18}
+                  height={18}
                   alt="interest"
                   className=""
                 />
-                <span className="text-xs text-textMuted">interest</span>
+                <span className="text-sm text-textMuted">interest</span>
               </div>
               <div className="flex items-center gap-2">
-                <BsChevronDown size={17} className="text-white font-bold" />
+                <BsChevronDown size={18} className="text-white font-bold" />
                 <Image
                   src={'/svg/case.svg'}
-                  width={17}
-                  height={17}
+                  width={18}
+                  height={18}
                   alt="profession"
                   className=""
                 />
-                <span className="text-xs text-textMuted">education</span>
+                <span className="text-sm text-textMuted">education</span>
               </div>
               <div className="pl-12 flex items-center gap-2">
                 <Image
                   src={'/svg/education.svg'}
-                  width={17}
-                  height={17}
+                  width={18}
+                  height={18}
                   alt="education"
                   className=""
                 />
-                <span className="text-xs text-textMuted">high-school</span>
+                <span className="text-sm text-textMuted">high-school</span>
               </div>
               <div className="pl-12 flex items-center gap-2">
                 <Image
                   src={'/svg/education.svg'}
-                  width={17}
-                  height={17}
+                  width={18}
+                  height={18}
                   alt="education"
                   className=""
                 />
-                <span className="text-xs text-textMuted">university</span>
+                <span className="text-sm text-textMuted">university</span>
               </div>
             </div>
           </div>
           {/* 2 */}
           <div className="w-full h-12 bg-textMuted2 flex gap-3 items-center px-3">
-            <BsFillCaretRightFill size={17} className="text-white" />
+            <BsFillCaretRightFill size={18} className="text-white" />
             <h6 className="text-white text-lg">professional-info</h6>
           </div>
           {/* 3 */}
           <div className="w-full h-12 bg-textMuted2 flex gap-3 items-center px-3">
-            <BsFillCaretRightFill size={17} className="text-white" />
+            <BsFillCaretRightFill size={18} className="text-white" />
             <h6 className="text-white text-lg">hobbies</h6>
           </div>
           <div className="w-full h-12 bg-textMuted2 flex gap-3 items-center px-3">
-            <BsFillCaretRightFill size={17} className="text-white" />
+            <BsFillCaretRightFill size={18} className="text-white" />
             <h6 className="text-white text-lg">contact</h6>
           </div>
         </div>
@@ -113,26 +97,26 @@ export default function AboutMobile() {
         {/*  */}
         <div className="w-full h-fit flex flex-col items-start gap-4 px-3">
           <div className="w-full">
-            <h6 className="text-lg text-white">
+            <h6 className="text-xl text-white">
               {'//'} personal-info{' '}
-              <span className="text-textMuted2">/ bio</span>
+              <span className="text-textMuted2 text-sm font-bold">/ bio</span>
             </h6>
           </div>
           {/* about me */}
 
           <div className="w-full h-fit">
-            <p className="text-textMuted text-sm">
+            <p className="text-textMuted text-lg">
               <Balancer>
-                Having two (2) years experience, I like to craft solid and
+                Having three (3) years experience, I like to craft solid and
                 scalable frontend product with great user experiences.
               </Balancer>
             </p>
             <br />
 
-            <p className="text-textMuted text-sm">
+            <p className="text-textMuted text-lg">
               <Balancer>
                 I may not fit the typical profile of a designer sitting behind
-                an Illustrator artboard, meticulously adjusting pixels. However,
+                an Illustrator art-board, meticulously adjusting pixels. However,
                 design is my passion. You{"'"}ll find me deeply engrossed in
                 stylesheets, fine-tuning font sizes, and contemplating layouts.
                 My dedication lies in crafting seamless user experiences while
@@ -143,7 +127,7 @@ export default function AboutMobile() {
               <br />
             </p>
 
-            <p className="text-textMuted text-sm">
+            <p className="text-textMuted text-lg">
               <Balancer>
                 When it comes to building JavaScript applications, I have the
                 right tools and the ability to work independently with them. My

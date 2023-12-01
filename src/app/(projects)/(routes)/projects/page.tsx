@@ -10,7 +10,7 @@ interface pageProps {}
 const page: FC<pageProps> = ({}) => {
   return (
     <main className="w-full h-fit lg:h-screen overflow-y-scroll lg:overflow-hidden">
-      <div className="w-full flex items-start gap-0 h-full">
+      <div className="hidden w-full lg:flex items-start gap-0 h-full">
         <div className="w-[15%] h-full border-r-2 border-textMuted2 flex flex-col pt-5 items-center gap-0">
           <div className="w-full h-[10%] border-b-2 border-textMuted2 flex items-center justify-start pl-4 pt-7">
             <div className="w-fit h-fit flex items-center gap-2">
