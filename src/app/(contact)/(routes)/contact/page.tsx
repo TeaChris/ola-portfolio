@@ -1,7 +1,7 @@
-import ContactForm from '@/components/ContactForm'
-import ContactSideBar from '@/components/ContactSideBar'
-import MobileFormHeading from '@/components/MobileFormHeading'
-import MobileContactForm from '@/components/MobileContactForm'
+import ContactForm from '@/app/(contact)/_components/ContactForm'
+import ContactSideBar from '@/app/(contact)/_components/ContactSideBar'
+import MobileFormHeading from '@/app/(contact)/_components/MobileFormHeading'
+import MobileContactForm from '@/app/(contact)/_components/MobileContactForm'
 
 export default function page() {
   return (

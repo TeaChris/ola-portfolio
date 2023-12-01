@@ -1,5 +1,5 @@
 import { VscClose } from 'react-icons/vsc'
-import Form from './Form'
+import Form from '../../../components/Form'
 
 export default function ContactForm() {
   return (

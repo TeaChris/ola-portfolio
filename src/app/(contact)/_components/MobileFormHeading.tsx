@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { BsCaretRightFill, BsCaretDownFill } from 'react-icons/bs'
-import { Button } from './ui/button'
+import { Button } from '../../../components/ui/button'
 import find from '@/assets/find.svg'
 import Image from 'next/image'
 
@@ -22,27 +22,27 @@ export default function MobileFormHeading() {
       </div>
       <div className="w-full h-fit items-start gap-2 flex flex-col pl-6">
         <Link href="" className="">
-          <Button variant="ghost" className='w-full flex items-center gap-2'>
+          <Button variant="ghost" className="w-full flex items-center gap-2">
             <Image src={find} alt="find" />
-            <span className='text-sm text-textMuted'>+234 814 691 3991</span>
+            <span className="text-sm text-textMuted">+234 814 691 3991</span>
           </Button>
         </Link>
         <Link href="" className="">
-          <Button variant="ghost" className='w-full flex items-center gap-2'>
+          <Button variant="ghost" className="w-full flex items-center gap-2">
             <Image src={find} alt="find" />
-            <span className='text-sm text-textMuted'>twitter</span>
+            <span className="text-sm text-textMuted">twitter</span>
           </Button>
         </Link>
         <Link href="" className="">
-          <Button variant="ghost" className='w-full flex items-center gap-2'>
+          <Button variant="ghost" className="w-full flex items-center gap-2">
             <Image src={find} alt="find" />
-            <span className='text-sm text-textMuted'>thread</span>
+            <span className="text-sm text-textMuted">thread</span>
           </Button>
         </Link>
         <Link href="" className="">
-          <Button variant="ghost" className='w-full flex items-center gap-2'>
+          <Button variant="ghost" className="w-full flex items-center gap-2">
             <Image src={find} alt="find" />
-            <span className='text-sm text-textMuted'>linkedin</span>
+            <span className="text-sm text-textMuted">linkedin</span>
           </Button>
         </Link>
       </div>

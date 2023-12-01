@@ -2,9 +2,7 @@
 
 import { FC, useState } from 'react'
 
-import AboutIcon from '@/app/(about)/_components/AboutIcon'
 import AboutSkills from '@/app/(about)/_components/AboutSkills'
-import CodeSnippet from '@/app/(about)/_components/CodeSnippet'
 import PersonalInfo from '@/app/(about)/_components/PersonalInfo'
 import AboutMobile from '@//app/(about)/_components/AboutMobile'
 import Image from 'next/image'

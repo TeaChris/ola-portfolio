@@ -1,13 +1,6 @@
 import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsCaretDownFill, BsChevronDown, BsChevronRight } from 'react-icons/bs'
-import bio from '@/assets/bio.svg'
-import interest from '@/assets/interest.svg'
-import pro from '@/assets/profession.svg'
-import education from '@/assets/education.svg'
-import mail from '@/assets/mail.svg'
-import phone from '@/assets/phone.svg'
 import {
   ChevronDown,
   ChevronRight,
@@ -19,22 +12,6 @@ import {
 } from 'lucide-react'
 
 import { about } from '@/data'
-
-const lists = [
-  {
-    label: 'bio',
-    img: '/svg/bio.svg',
-  },
-  {
-    label: 'interests',
-    img: '/svg/education.svg',
-  },
-  {
-    label: 'education',
-    img: '/svg/education.svg',
-    children: [{ label: 'high-school' }, { label: 'university' }],
-  },
-]
 
 interface PersonalInfoProps {}
 

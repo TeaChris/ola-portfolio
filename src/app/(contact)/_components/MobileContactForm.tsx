@@ -1,11 +1,11 @@
 'use client'
 import { useState, useRef } from 'react'
 import { useForm } from 'react-hook-form'
-import { Label } from './ui/label'
-import { Input } from './ui/input'
-import { Textarea } from './ui/textarea'
-import { Button } from './ui/button'
-import SuccessModal from './SuccessModal'
+import { Label } from '../../../components/ui/label'
+import { Input } from '../../../components/ui/input'
+import { Textarea } from '../../../components/ui/textarea'
+import { Button } from '../../../components/ui/button'
+import SuccessModal from '../../../components/SuccessModal'
 
 type FormValues = {
   name: string
