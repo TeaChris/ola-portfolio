@@ -1,24 +1,29 @@
-import Link from 'next/link'
+import { VscClose } from 'react-icons/vsc'
 import Image from 'next/image'
-import { buttonVariants } from './ui/button'
+import Link from 'next/link'
+import { buttonVariants } from '../../../components/ui/button'
 import { getProjects } from '@/lib/sanity-utils'
 
-export default async function ProjectMobile() {
+interface ProjectsProps {}
+
+export default async function Projects() {
   const projects = await getProjects()
   return (
-    <div className="w-full h-fit mt-20 flex flex-col items-start gap-4">
-      <div className="w-full px-3 flex items-center gap-2">
-        <h6 className="text-lg text-white capitalize">{'//'}_projects</h6>
-        <span className="text-lg text-textMuted2 capitalize">{'/'}all</span>
+    <main className="w-[83.1%] h-screen flex flex-col gap-0 overflow-y-scroll pt-9">
+      <div className="w-full h-16 border-b-2 border-textMuted2 pt-4">
+        <div className="w-48 h-full flex items-center justify-between  px-2 pt-1 border-r-2 border-textMuted2">
+          <span className="text-xs text-textMuted">Nextjs; Tailwind</span>
+          <VscClose size={17} className="text-textMuted" />
+        </div>
       </div>
 
-      {/*  */}
-      <div className="w-full h-[90rem] flex flex-col items-center gap-6 px-3 pb-4">
+      {/* projects */}
+      <div className="w-full max-w-fit h-fit mt-8 pl-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
         {projects.map((project) => {
           return (
             <div
               key={project._id}
-              className="w-[22rem] h-fit bg-transparent flex flex-col gap-2 items-start shadow-textMuted2 shadow-sm"
+              className="w-72 h-fit bg-transparent flex flex-col gap-2 items-start"
             >
               <div className="w-full h-fit flex gap-2 items-center">
                 <h6 className="text-xs text-textPurple capitalize">
@@ -35,7 +40,7 @@ export default async function ProjectMobile() {
                   alt={project.slug}
                   width={570}
                   height={400}
-                  className="w-full h-36 object-cover rounded-t-md"
+                  className="w-full h-28 object-cover rounded-t-md"
                 />
                 <div className="w-full h-fit pl-3">
                   <p className="text-xs text-textMuted first-letter:capitalize">
@@ -57,6 +62,6 @@ export default async function ProjectMobile() {
           )
         })}
       </div>
-    </div>
+    </main>
   )
 }
