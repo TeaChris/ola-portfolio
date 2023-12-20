@@ -1,7 +1,7 @@
 import { VscClose } from 'react-icons/vsc'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buttonVariants } from '../../../components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import { getProjects } from '@/lib/sanity-utils'
 
 interface ProjectsProps {}
